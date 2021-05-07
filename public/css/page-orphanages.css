@@ -1,0 +1,102 @@
+#page-orphanages {
+    width: 100%; /* Largura de 100% */
+    height: 100%; /* Altura de 100% */
+
+    display: flex;
+}
+
+aside { /* Barra lateral */
+    width: clamp(24rem, 25vw, 44rem);
+    background: linear-gradient(329.54deg, #15b6d6 0%, #15d6d6 100%); /*retangulo azul com degradê*/
+    padding: clamp(3rem, 5vw, 8rem); /*Preenchimento com uma borda*/
+
+    display: flex;
+    flex-direction: column; /*por padrão o displa flex sempre coloca os elementos lado a lado, com o column ficam abaixo*/
+    justify-content: space-between; 
+}
+
+aside h2 {
+    margin-top: 6.4rem; /* espaço em cima */
+
+    font: 800 clamp(2rem, 5vw, 3.6rem)/1.1 'Nunito', sans-serif;
+}
+
+aside p {
+    margin-top: 2.4rem;
+    font: 400 1.6rem/1.5 'Nunito', sans-serif;
+}
+
+aside footer p {
+    margin-top: .8rem;
+}
+
+#mapid { /* tamanho do mapa na tela que temos disponível */
+    width: 100%;
+    height: 100%;
+    animation-delay: 200ms;
+}
+
+a.create-orphanage { /* Configurações do Botão */
+    position: absolute; /* cria-se uma nova camada de trabalho */
+    right: 4rem; /* joga o botão pra direita e cria um espaçamento de 4rem */
+    bottom: 4rem;  /*joga o botão pra baixo e cria um espaçamento de 4rem */
+
+    z-index: 10;
+
+    width: 6.4rem;
+    height: 6.4rem;
+    background: #15C3D6;
+    border: 0; /* Tira a borda do botão */
+    border-radius: 2rem; /* arredondando a borda */
+
+    display: flex;
+    justify-content: center; /* alinhar os conteúdos dentro, da maneira justificada ao centro */
+    align-items: center; /* alinhada ao centro */
+
+    transition: background-color 200ms ; /* faz a transição de cor do botão, utilizando a cor de background do :hover */
+}
+
+a.create-orphanage:hover { /* quando o mouse estiver em cima do botão, usa-se -> ":hover" */
+    background: #17d6eb;
+}
+
+.leaflet-popup-content-wrapper { /*Classe para mexer no wrapper do popup */
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px; /* arredondamento da box */
+}
+
+.leaflet-popup-content { /* Caixinha onde aparece o nome do orfanato e o botão */
+    color: #0089a5;
+    margin: .8rem 1.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leaflet-popup-content a {
+    width: 4rem;
+    height: 4rem;
+    background: #15C3D6 ;
+    box-shadow: 17.2828px 27.65px 41.48px rgba(23, 142, 166, 0.16); /* sombra da box: x,y,esfumaçado, cor */
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 200ms;
+}
+
+.leaflet-popup-content a:hover {
+    background: #17D6EB;
+}
+
+.leaflet-popup-tip {
+    display: none;
+}
+
+.leaflet-container {
+    font: 700 2rem/1 'Nunito', sans-serif;
+    z-index: 5;
+}
